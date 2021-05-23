@@ -1,0 +1,83 @@
+/* ----------------SMOOTH SCROLL---------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+	}
+}
+
+/* COLOR VARIABLES */
+/* color palette taken from https://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html */
+:root {
+    --primary-blue-color: #3d6d79;
+    --primary-orange-color: #d69d66;
+    --primary-grey-color: #e0e2ee;
+    --primary-white-color: #fff;
+}
+
+.bg-blue {
+    background-color: var(--primary-blue-color);
+}
+
+.bg-orange {
+    background-color: var(--primary-orange-color);
+}
+
+.bg-grey {
+    background-color: var(--primary-grey-color);
+}
+
+.bg-white {
+    background-color: var(--primary-white-color)
+}
+
+/* GLOBAL FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans&family=Righteous&display=swap');
+
+body {
+    font-family: 'Cutive Mono', monospace;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--primary-blue-color);
+    color: var(--primary-white-color);
+}
+
+.main-content {
+    padding-top: 60px;
+}
+
+.navbar {
+    border-bottom: 3px solid var(--primary-white-color);
+}
+
+#nav-projects-tab {
+    border-left: 3px solid var(--primary-white-color) !important;
+    border-right: 3px solid var(--primary-white-color) !important;
+}
+
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 0px !important;
+}
+
+.nav-link {
+    color: var(--primary-orange-color);
+}
+
+.nav-link.active {
+    background-color: var(--primary-orange-color) !important;
+}
+
+.nav-link:hover {
+    color: rgb(223, 223, 223);
+}
