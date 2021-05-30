@@ -51,8 +51,11 @@ body {
 }
 
 body {
-    min-height: 100vh;
     background-color: var(--primary-blue-color);
+}
+
+.h-100-vh {
+    height: 100vh;
 }
 
 * {
@@ -102,7 +105,4 @@ body {
     /* height: 8em; */
     /* max-width: 8em; */
     object-fit: cover;
-}
-
-.card-link, .card-link:visited {
 }

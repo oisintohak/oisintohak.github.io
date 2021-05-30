@@ -17,154 +17,180 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Oisin Tohak - Portfolio</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/integration
-            emailjs.init('user_mAnea3QFbT15oFRptm5qE');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('gmail', 'contact_form', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
 </head>
 
 <body>
-    <nav id="top-nav" class="navbar fixed-top bg-grey p-0">
-        <div class="nav nav-pills nav-justified justify-content-around w-100" id="nav-tab" role="tablist">
-            <button class="nav-link active text-uppercase" id="nav-about-tab" data-bs-toggle="tab"
-                data-bs-target="#nav-about" type="button" role="tab" aria-controls="nav-about"
-                aria-selected="true">About</button>
-            <button class="nav-link text-uppercase" id="nav-projects-tab" data-bs-toggle="tab"
-                data-bs-target="#nav-projects" type="button" role="tab" aria-controls="nav-projects"
-                aria-selected="false">Projects</button>
-            <button class="nav-link text-uppercase" id="nav-contact-tab" data-bs-toggle="tab"
-                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
-                aria-selected="false">Contact</button>
-        </div>
-    </nav>
+    <div class="h-100-vh">
+        <nav id="top-nav" class="navbar fixed-top bg-grey p-0">
+            <div class="nav nav-pills nav-justified justify-content-around w-100" id="nav-tab" role="tablist">
+                <button class="nav-link active text-uppercase" id="nav-about-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-about" type="button" role="tab" aria-controls="nav-about"
+                    aria-selected="true">About</button>
+                <button class="nav-link text-uppercase" id="nav-projects-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-projects" type="button" role="tab" aria-controls="nav-projects"
+                    aria-selected="false">Projects</button>
+                <button class="nav-link text-uppercase" id="nav-contact-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                    aria-selected="false">Contact</button>
+            </div>
+        </nav>
 
-    <div class="tab-content main-content" id="nav-tabContent">
-        <!-- ABOUT -->
-        <div class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos et ea
-                earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente nisi.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos et ea
-                earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente nisi.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos et ea
-                earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente nisi.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos et ea
-                earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente nisi.
-            </p>
-        </div>
-        <!-- PROJECTS -->
-        <div class="tab-pane fade" id="nav-projects" role="tabpanel" aria-labelledby="nav-projects-tab">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 col-lg-6 pb-4">
-                        <div class="card mx-auto p-2">
-                            <img src="images/MS1.jpg" class="card-img-top p-1" alt="Website responsive mockup">
-                            <div class="card-body">
-                                <h5 class="card-title">The Drum School</h5>
-                                <p class="card-text">A streamlined, responsive demo website for a drum school.</p>
-                            </div>
-                            <div class="card-body">
-                                <a href="https://github.com/oisintohak/The-Drum-School---MS1"
-                                    class="card-link btn btn-sm bg-grey"><i class="fab fa-github pe-1"></i>GitHub</a>
-                                <a href="https://oisintohak.github.io/Milestone-Project-1/"
-                                    class="card-link btn btn-sm bg-grey"><i class="fas fa-desktop pe-1"></i>Live
-                                    Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 col-lg-6 pb-4">
-                        <div class="card mx-auto p-2">
-                            <img src="images/MS2.jpg" class="card-img-top p-1" alt="Website responsive mockup">
-                            <div class="card-body">
-                                <h5 class="card-title">Workout Interval Timer</h5>
-                                <p class="card-text">A Javascript interval timer with a minimal interface and interval
-                                    settings.</p>
-                            </div>
-                            <div class="card-body">
-                                <a href="https://github.com/oisintohak/Workout-Interval-Timer---MS2"
-                                    class="card-link btn btn-sm bg-grey"><i class="fab fa-github pe-1"></i>GitHub</a>
-                                <a href="https://oisintohak.com/Workout-Interval-Timer---MS2/"
-                                    class="card-link btn btn-sm bg-grey"><i class="fas fa-desktop pe-1"></i>Live
-                                    Site</a>
+        <div class="tab-content main-content h-100" id="nav-tabContent">
+            <!-- ABOUT -->
+            <div class="tab-pane fade show active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos
+                    et ea
+                    earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente
+                    nisi.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos
+                    et ea
+                    earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente
+                    nisi.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos
+                    et ea
+                    earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente
+                    nisi.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque in ullam dolor dignissimos
+                    et ea
+                    earum beatae hic quas itaque, necessitatibus nobis eaque, deleniti dolore! Maxime maiores sapiente
+                    nisi.
+                </p>
+            </div>
+            <!-- PROJECTS -->
+            <div class="tab-pane fade" id="nav-projects" role="tabpanel" aria-labelledby="nav-projects-tab">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-6 pb-4">
+                            <div class="card mx-auto p-2">
+                                <img src="images/MS1.jpg" class="card-img-top p-1" alt="Website responsive mockup">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Drum School</h5>
+                                    <p class="card-text">A streamlined, responsive demo website for a drum school.</p>
+                                </div>
+                                <div class="card-body">
+                                    <a href="https://github.com/oisintohak/The-Drum-School---MS1"
+                                        class="card-link btn btn-sm bg-grey"><i
+                                            class="fab fa-github pe-1"></i>GitHub</a>
+                                    <a href="https://oisintohak.github.io/Milestone-Project-1/"
+                                        class="card-link btn btn-sm bg-grey"><i class="fas fa-desktop pe-1"></i>Live
+                                        Site</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-8 col-lg-6 pb-4">
-                        <div class="card mx-auto p-2">
-                            <img src="images/MS3.jpg" class="card-img-top p-1" alt="Website responsive mockup">
-                            <div class="card-body">
-                                <h5 class="card-title">We Cook - Recipe Sharing</h5>
-                                <p class="card-text">A fullstack web app with that allows user to register and add
-                                    recipes and discover other users' recipes.</p>
+                        <div class="col-12 col-md-8 col-lg-6 pb-4">
+                            <div class="card mx-auto p-2">
+                                <img src="images/MS2.jpg" class="card-img-top p-1" alt="Website responsive mockup">
+                                <div class="card-body">
+                                    <h5 class="card-title">Workout Interval Timer</h5>
+                                    <p class="card-text">A Javascript interval timer with a minimal interface and
+                                        interval
+                                        settings.</p>
+                                </div>
+                                <div class="card-body">
+                                    <a href="https://github.com/oisintohak/Workout-Interval-Timer---MS2"
+                                        class="card-link btn btn-sm bg-grey"><i
+                                            class="fab fa-github pe-1"></i>GitHub</a>
+                                    <a href="https://oisintohak.com/Workout-Interval-Timer---MS2/"
+                                        class="card-link btn btn-sm bg-grey"><i class="fas fa-desktop pe-1"></i>Live
+                                        Site</a>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <a href="#" class="card-link btn btn-sm bg-grey">
-                                    <i class="fab fa-github pe-1"></i>GitHub
-                                </a>
-                                <a href="#" class="card-link btn btn-sm bg-grey">
-                                    <i class="fas fa-desktop pe-1"></i>Live Site
-                                </a>
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-6 pb-4">
+                            <div class="card mx-auto p-2">
+                                <img src="images/MS3.jpg" class="card-img-top p-1" alt="Website responsive mockup">
+                                <div class="card-body">
+                                    <h5 class="card-title">We Cook - Recipe Sharing</h5>
+                                    <p class="card-text">A fullstack web app with that allows user to register and add
+                                        recipes and discover other users' recipes.</p>
+                                </div>
+                                <div class="card-body">
+                                    <a href="#" class="card-link btn btn-sm bg-grey">
+                                        <i class="fab fa-github pe-1"></i>GitHub
+                                    </a>
+                                    <a href="#" class="card-link btn btn-sm bg-grey">
+                                        <i class="fas fa-desktop pe-1"></i>Live Site
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- CONTACT -->
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            <div class="container">
+            <!-- CONTACT -->
+            <div class="tab-pane fade container h-100 d-flex flex-column justify-content-center px-3" id="nav-contact"
+                role="tabpanel" aria-labelledby="nav-contact-tab">
                 <div class="row justify-content-center">
-                    <div class="col-12">
-                        <div class="card">
-                            <form id="contact-form">
-                                <input type="hidden" name="contact_number">
-                                <label>Name</label>
-                                <input type="text" name="user_name">
-                                <label>Email</label>
-                                <input type="email" name="user_email">
-                                <label>Message</label>
-                                <textarea name="message"></textarea>
-                                <div class="g-recaptcha" data-sitekey="6LccLfgaAAAAANvAX0UjSg1aqKVMuF9s4FssxQW6"></div>
-                                <input type="submit" value="Send">
-                            </form>
-                        </div>
+                    <div class="col col-lg-8 col-xl-6 col-xxl-5">
+                        <form id="contact-form" class="card p-3">
+                            <h3 class="text-center mb-3">Send me a message:</h3>
+                            <div class="mb-3">
+                                <label for="name-input" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name-input" name="user_name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email-input" name="user_email"
+                                    placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+
+                            <!-- RECAPTCHA -->
+                            <!-- <div class="g-recaptcha" data-sitekey="6LccLfgaAAAAANvAX0UjSg1aqKVMuF9s4FssxQW6"></div> -->
+                            <button id="submit" type="submit" class="btn btn-primary">Send</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- CONTACT SUCCESS MODAL -->
+        <div class="modal fade" id="success-modal" tabindex="-1" aria-labelledby="success-modal-label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="success-modal-label">Message Sent!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        We will respond as soon as possible.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTACT FAILURE MODAL -->
+        <div class="modal fade" id="failure-modal" tabindex="-1" aria-labelledby="failure-modal-label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="failure-modal-label">Message not sent!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Please try again.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/script.js"></script>
     </div>
-    <script>
-        const navLinks = document.querySelectorAll('.nav-link');
-        for (let item of navLinks) {
-            item.addEventListener('click', function (event) {
-                window.scrollTo(0, 0);
-                console.log('scroll');
-            })
-        }
-    </script>
+
 </body>
 
 </html>
