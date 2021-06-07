@@ -2,12 +2,21 @@ import React from 'react';
 import MS1 from '../images/MS1.jpg';
 import MS2 from '../images/MS2.jpg';
 import MS3 from '../images/MS3.jpg';
-import FadeIn from './FadeIn';
+import { motion } from "framer-motion";
+import Navbar from './NavBar';
 
 
 export default function Contact() {
+    const variants = {
+        initial: { opacity: 0, x: -80 },
+        animate: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 80 },
+    }
+
     return (
-        <FadeIn delay={250} duration={600}>
+        <>
+        <Navbar />            
+        <motion.div initial="initial" animate="animate" exit="exit" variants={variants} transition={{ duration: 0.3 }}>
             <div className="container">
                 <div className="row justify-content-center pt-4">
                     <div className="col-12 col-md-8 col-lg-6 pb-4">
@@ -66,7 +75,8 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        </FadeIn>
+        </motion.div>
+        </>
 
     )
 }

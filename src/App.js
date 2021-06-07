@@ -1,21 +1,41 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
+  const [isFirstMount, setIsFirstMount] = React.useState(true);
+  const location = useLocation();
+  const history = useHistory();
+
+  React.useEffect(() => {
+    const unlisten = history.listen(() => {
+      isFirstMount && setIsFirstMount(false);
+    });
+    return unlisten;
+  }, [history, isFirstMount]);
+
   return (
-    <>
-      <NavBar />
-        <Switch>
-          <Route component={About} path='/' exact />
-          <Route component={Projects} path='/projects' />
-          <Route component={Contact} path='/contact' />
-        </Switch>
-    </>
+    <AnimatePresence exitBeforeEnter>
+      <Switch location={location} key={location.pathname}>
+        <Route 
+        path='/' 
+        exact
+        component={(props) => (
+          <About isFirstMount={isFirstMount} {...props} />
+        )} 
+         />
+        <Route component={Projects} path='/projects' />
+        <Route component={Contact} path='/contact' />
+      </Switch>
+      <Footer />
+    </AnimatePresence>
   );
 }
 
