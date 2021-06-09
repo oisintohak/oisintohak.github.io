@@ -45,8 +45,9 @@ export default function Loader() {
                     onAnimationComplete={() => {
                         document.body.classList.remove("overflow-hidden");
                         document.getElementById("loader").style.zIndex = -999;
+                        document.getElementById("loader").parentNode.removeChild(document.getElementById("loader"));
                     }
-                    }
+                 }
                 />
             </motion.div>
         </div>
