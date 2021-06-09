@@ -34,8 +34,7 @@ const Contact = () => {
     return (
         <>
             <Navbar />
-            <motion.div initial="initial" animate="animate" exit="exit" variants={form} >
-                <div className="container">
+            <motion.div className="container" initial="initial" animate="animate" exit="exit" variants={form} >
                     <div className="row justify-content-center pt-4">
                         <div className="col col-lg-8 col-xl-6 col-xxl-5">
                             <form id="contact-form" className="card p-3" onSubmit={sendEmail}>
@@ -62,7 +61,6 @@ const Contact = () => {
                             </form>
                         </div>
                     </div>
-                </div>
             </motion.div>
         </>
     )

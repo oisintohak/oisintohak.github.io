@@ -4,51 +4,59 @@ import MS2 from '../images/MS2.jpg';
 import MS3 from '../images/MS3.jpg';
 import { motion } from "framer-motion";
 import Navbar from './NavBar';
-import { FaGithub } from "react-icons/fa"
-import { FaDesktop } from "react-icons/fa"
-
+import {FaGithub} from "react-icons/fa"
+import {FaDesktop} from "react-icons/fa"
 
 const container = {
     animate: {
-        transition: {
-            staggerChildren: 0.4,
-        },
+      transition: { staggerChildren: 0.4 },
     },
-    exit: {
-        opacity: 0,
-    },
-};
-
-const card = {
-    initial: {
-        opacity: 0,
-        x: -80,
-    },
+  };
+  
+  const card1 = {
+    initial: { y: -20, opacity: 0 },
     animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 0.4,
-        },
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
     },
-    exit: {
-        opacity: 0,
-        x: 80,
-    }
-};
-
+  };
+  
+  const card2 = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+  
+  const card3 = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+  
 const Projects = () => {
+
     return (
         <>
             <Navbar />
             <div className="container">
-            <motion.div
-                variants={container}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                className="row justify-content-center pt-4">
-                    <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                <motion.div animate="animate" variants={container} className="row pt-4 justify-content-center">
+                    <motion.div className="col-12 col-md-8 col-lg-6 pb-4" initial="initial" animate="animate" exit="exit" variants={card1}>
                         <div className="card mx-auto p-2">
                             <img src={MS1} className="card-img-top p-1" alt="Website responsive mockup" />
                             <div className="card-body">
@@ -64,7 +72,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </motion.div>
-                    <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                    <motion.div className="col-12 col-md-8 col-lg-6 pb-4" initial="initial" animate="animate" exit="exit" variants={card2}>
                         <div className="card mx-auto p-2">
                             <img src={MS2} className="card-img-top p-1" alt="Website responsive mockup" />
                             <div className="card-body">
@@ -83,7 +91,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </motion.div>
-                    <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                    <motion.div className="col-12 col-md-8 col-lg-6 pb-4" initial="initial" animate="animate" exit="exit" variants={card3}>
                         <div className="card mx-auto p-2">
                             <img src={MS3} className="card-img-top p-1" alt="Website responsive mockup" />
                             <div className="card-body">
@@ -105,7 +113,7 @@ const Projects = () => {
                 </motion.div>
             </div>
         </>
-    );
+    )
 };
 
 export default Projects;
