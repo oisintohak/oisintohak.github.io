@@ -1,8 +1,8 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
 import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 import About from './components/About';
 import Projects from './components/Projects';
@@ -23,18 +23,18 @@ function App() {
 
   return (
     <AnimatePresence exitBeforeEnter>
-      <Switch location={location} key={location.pathname}>
-        <Route 
-        path='/' 
-        exact
-        component={(props) => (
-          <About isFirstMount={isFirstMount} {...props} />
-        )} 
-         />
-        <Route component={Projects} path='/projects' />
-        <Route component={Contact} path='/contact' />
-      </Switch>
-      <Footer />
+        <Switch location={location} key={location.pathname}>
+          <Route
+            path='/'
+            exact
+            component={(props) => (
+              <About isFirstMount={isFirstMount} {...props} />
+            )}
+          />
+          <Route component={Projects} path='/projects' />
+          <Route component={Contact} path='/contact' />
+        </Switch>
+        <Footer />
     </AnimatePresence>
   );
 }

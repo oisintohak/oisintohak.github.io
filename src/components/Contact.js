@@ -5,9 +5,8 @@ import { motion } from "framer-motion";
 import Navbar from './NavBar';
 
 
-
-
-export default function Contact() {
+const Contact = () => {
+    // EMAIL JS
     function sendEmail(e) {
         e.preventDefault();
 
@@ -19,17 +18,23 @@ export default function Contact() {
             });
     }
 
-    const variants = {
-        initial: { opacity: 0, x: -80 },
+    // FORM ANIMATION
+    const form = {
+        initial: {
+            opacity: 0,
+            x: -60,
+            transition: {
+                duration: 0.3,
+            },
+        },
         animate: { opacity: 1, x: 0 },
-        exit: { opacity: 0, x: 80 },
-    }
-
+        exit: { opacity: 0, x: 60 },
+    };
 
     return (
         <>
-        <Navbar />
-            <motion.div initial="initial" animate="animate" exit="exit" variants={variants} transition={{ duration: 0.3 }}>
+            <Navbar />
+            <motion.div initial="initial" animate="animate" exit="exit" variants={form} >
                 <div className="container">
                     <div className="row justify-content-center pt-4">
                         <div className="col col-lg-8 col-xl-6 col-xxl-5">
@@ -60,6 +65,7 @@ export default function Contact() {
                 </div>
             </motion.div>
         </>
-
     )
 }
+
+export default Contact;
