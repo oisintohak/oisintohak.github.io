@@ -142,7 +142,7 @@ const Projects = () => {
                                     </div>
                                     <a href="https://github.com/oisintohak/The-Drum-School---MS1" target="_blank" rel="noopener noreferrer"
                                         className="btn btn-sm bg-orange me-2"><FaGithub /> GitHub</a>
-                                    <a href="https://oisintohak.github.io/Milestone-Project-1/" target="_blank" rel="noopener noreferrer"
+                                    <a href="https://oisintohak.com/The-Drum-School---MS1/" target="_blank" rel="noopener noreferrer"
                                         className="btn btn-sm bg-orange me-2 pe-2"><FaDesktop /> Live Site</a>
                                 </div>
                             </div>

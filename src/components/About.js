@@ -125,18 +125,20 @@ export default function About({ isFirstMount }) {
 
     const skills = {
         initial: {
+            y: 20,
             opacity: 0,
         },
         animate: {
+            y: 0,
             opacity: 1,
             transition: {
-                delay: 1.5,
+                delay: isFirstMount ? 4.5 : 1.5,
                 duration: 0.4,
             },
         },
         exit: {
             opacity: 0,
-            y: -20,
+            y: 20,
             transition: {
                 duration: 0.2,
             },
