@@ -2,6 +2,8 @@
 
 This is my portfolio, hosted at: [oisintohak.com](https://oisintohak.com/#/)
 
+The master branch contains the deployed version, for the development branch click [here](https://github.com/oisintohak/oisintohak.github.io/tree/pre_deploy).
+
 #### Technologies used
 
  - [Create React App](https://create-react-app.dev/) was used to set up boilerplate code
