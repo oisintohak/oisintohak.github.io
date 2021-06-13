@@ -10,7 +10,7 @@ const Navbar = () => {
                     <ul className="navbar-nav 
                      justify-content-center">
                         <li className="nav-item px-2 text-uppercase">
-                            <NavLink className="nav-link " activeClassName="active" to="/" exact>Home</NavLink>
+                            <NavLink className="nav-link " activeClassName="active" to="/" exact>About</NavLink>
                         </li>
                         <li className="nav-item border-start border-end px-2 text-uppercase">
                             <NavLink className="nav-link " activeClassName="active" to="/projects">Projects</NavLink>

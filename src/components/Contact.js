@@ -63,7 +63,7 @@ const Contact = () => {
             <motion.div initial="initial" animate="animate" exit="exit" variants={container} className="container">
                 <motion.div variants={items} className="row justify-content-center align-items-center pt-4">
                     <div className="col-lg-8 col-xl-6 col-xxl-5">
-                        <p className="text-white">To get in touch just send an email to <a className="text-orange" href="mailto:mail@oisintohak.com">mail@oisintohak.com</a>, reach out to me on <a className="text-orange" href="https://www.linkedin.com/in/oisintohak/" target="_blank" rel="noopener noreferrer"><FaLinkedin /> LinkedIn</a>, or just leave a message below:</p>
+                        <p className="text-white">To get in touch send an email to <a className="text-orange" href="mailto:mail@oisintohak.com">mail@oisintohak.com</a>, reach out to me on <a className="text-orange" href="https://www.linkedin.com/in/oisintohak/" target="_blank" rel="noopener noreferrer"><FaLinkedin />LinkedIn</a>, or just leave a message below:</p>
                     </div>
                 </motion.div>
                 <motion.div variants={items} className="row justify-content-center align-items-center py-4">
