@@ -17,6 +17,7 @@ html {
 :root {
   --primary-blue-color: #3d6d79;
   --primary-orange-color: #dd9221;
+  --light-orange-color: #EDB766;
   /* --primary-orange-color: #d69d66; */
   /* --primary-orange-color: #ff9100; */
   --primary-grey-color: #e0e2ee;
@@ -125,6 +126,7 @@ body {
   font-size: .8em;
   font-weight: 600;
   letter-spacing: .2em;
+  border-radius: .25rem;
 }
 
 .nav-link, .nav-link:active, .nav-link:visited {
@@ -192,25 +194,26 @@ body {
   background-color: var(--primary-grey-color);
 }
 
-.card-link {
-  margin: 0 !important;
+.card-body .btn:hover {
+  background-color: var(--light-orange-color);
 }
 
-/* .card {
-  width: 18em;
-  height: 27em;
-} */
-
 .card-img-top {
-  /* height: 8em; */
-  /* max-width: 8em; */
   object-fit: cover;
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  /* -moz-box-shadow:    inset 0 0 10px #000000; */
-  /* -webkit-box-shadow: inset 0 0 10px #000000; */
-  /* box-shadow:         inset 0 0 10px #000000; */
 }
+
+.card-body .skills-icon {
+  width: 6.8em;
+}
+
+.card-body .skills-icon .circle-icon {
+  padding: 0.1em;
+  width: 2em;
+  height: 2em;
+}
+
 
 /* FORM */
 
@@ -224,7 +227,7 @@ body {
 }
 
 a.text-orange:hover {
-  color: #EDB766;
+  color: var(--light-orange-color);
 }
 
 .form-control:focus {
