@@ -60,7 +60,7 @@ const Projects = () => {
                         className="row justify-content-center pt-4">
                         <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
                             <div className="card mx-auto p-2">
-                                <img src={MS2} className="card-img-top p-1" alt="Website responsive mockup" />
+                            <img src={MS2} className="card-img-top p-1" alt="Website responsive mockup" />
                                 <div className="card-body">
                                     <h5 className="card-title text-center fw-bold">Workout Interval Timer</h5>
                                     <p className="card-text">A Javascript interval timer with a minimal interface and interval settings.</p>
