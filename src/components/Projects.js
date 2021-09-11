@@ -6,7 +6,7 @@ import { FaGithub, FaDesktop } from 'react-icons/fa';
 import { SiHtml5, SiCss3, SiBootstrap, SiJavascript, SiReact, SiPython, SiFlask, SiDjango } from "react-icons/si";
 import Navbar from './NavBar';
 import SkillsIcon from './SkillsIcon';
-import MS1 from '../images/MS1.jpg';
+import MS4 from '../images/MS4.jpg';
 import MS2 from '../images/MS2.jpg';
 import MS3 from '../images/MS3.jpg';
 import PORTFOLIO from '../images/PORTFOLIO.jpg';
@@ -58,9 +58,9 @@ const Projects = () => {
                         animate="animate"
                         exit="exit"
                         className="row justify-content-center pt-4">
-                        <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                        <motion.div className="col-12 col-md-8 pb-4" variants={card}>
                             <div className="card mx-auto p-2">
-                                <img src={MS1} className="card-img-top p-1" alt="Website responsive mockup" />
+                                <img src={MS4} className="card-img-top p-1" alt="Website responsive mockup" />
                                 <div className="card-body">
                                     <h5 className="card-title text-center fw-bold">Farm To Fork</h5>
                                     <p className="card-text">
@@ -85,7 +85,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                        <motion.div className="col-12 col-md-8 pb-4" variants={card}>
                             <div className="card mx-auto p-2">
                                 <img src={MS2} className="card-img-top p-1" alt="Website responsive mockup" />
                                 <div className="card-body">
@@ -107,7 +107,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                        <motion.div className="col-12 col-md-8 pb-4" variants={card}>
                             <div className="card mx-auto p-2">
                                 <img src={MS3} className="card-img-top p-1" alt="Website responsive mockup" />
                                 <div className="card-body">
@@ -133,7 +133,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                        <motion.div className="col-12 col-md-8 pb-4" variants={card}>
                             <div className="card mx-auto p-2">
                                 <img src={PORTFOLIO} className="card-img-top p-1" alt="Website responsive mockup" />
                                 <div className="card-body">

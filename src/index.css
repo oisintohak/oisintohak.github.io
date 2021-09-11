@@ -171,13 +171,18 @@ body {
 }
 
 .profile-link {
-  text-decoration: none;
+  text-decoration: underline;
   transition-duration: 0.2s;
 }
 
 .profile-link:hover {
   color: var(--primary-orange-color) !important;
   border-color: var(--primary-orange-color) !important;
+}
+
+.profile-link .circle-icon {
+  border-color: inherit;
+  color: inherit;
 }
 
 .skills-icon {
