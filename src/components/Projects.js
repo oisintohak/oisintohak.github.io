@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from "framer-motion";
 import { IconContext } from 'react-icons';
 import { FaGithub, FaDesktop } from 'react-icons/fa';
-import { SiHtml5, SiCss3, SiBootstrap, SiJavascript, SiReact, SiPython, SiFlask } from "react-icons/si";
+import { SiHtml5, SiCss3, SiBootstrap, SiJavascript, SiReact, SiPython, SiFlask, SiDjango } from "react-icons/si";
 import Navbar from './NavBar';
 import SkillsIcon from './SkillsIcon';
 import MS1 from '../images/MS1.jpg';
@@ -60,7 +60,34 @@ const Projects = () => {
                         className="row justify-content-center pt-4">
                         <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
                             <div className="card mx-auto p-2">
-                            <img src={MS2} className="card-img-top p-1" alt="Website responsive mockup" />
+                                <img src={MS1} className="card-img-top p-1" alt="Website responsive mockup" />
+                                <div className="card-body">
+                                    <h5 className="card-title text-center fw-bold">Farm To Fork</h5>
+                                    <p className="card-text">
+                                        A fullstack Django app where farmers can sell products directly to their consumers. 
+                                        This app uses Stripe for payments and GeoDjango for spatial data.
+                                    </p>
+                                </div>
+                                <div className="card-body text-center">
+                                    <h6 className="col-auto align-middle">Built With:</h6>
+                                    <div className="row justify-content-center py-3">
+                                        <SkillsIcon IconName={SiHtml5} text="HTML 5" />
+                                        <SkillsIcon IconName={SiCss3} text="CSS 3" />
+                                        <SkillsIcon IconName={SiBootstrap} text="Bootstrap" />
+                                        <SkillsIcon IconName={SiJavascript} text="JavaScript" />
+                                        <SkillsIcon IconName={SiPython} text="Python" />
+                                        <SkillsIcon IconName={SiDjango} text="Django" />
+                                    </div>
+                                    <a href="https://github.com/oisintohak/Farm-To-Fork" target="_blank" rel="noopener noreferrer"
+                                        className="btn btn-sm bg-orange me-2"><FaGithub /> GitHub</a>
+                                    <a href="https://farmtoforkheroku.herokuapp.com/" target="_blank" rel="noopener noreferrer"
+                                        className="btn btn-sm bg-orange me-2 pe-2"><FaDesktop /> Live Site</a>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
+                            <div className="card mx-auto p-2">
+                                <img src={MS2} className="card-img-top p-1" alt="Website responsive mockup" />
                                 <div className="card-body">
                                     <h5 className="card-title text-center fw-bold">Workout Interval Timer</h5>
                                     <p className="card-text">A Javascript interval timer with a minimal interface and interval settings.</p>
@@ -87,7 +114,7 @@ const Projects = () => {
                                     <h5 className="card-title text-center fw-bold">We Cook - Recipe Sharing</h5>
                                     <p className="card-text">
                                         A fullstack web app with that allows user to register and add recipes and discover other users' recipes.
-                                </p>
+                                    </p>
                                 </div>
                                 <div className="card-body text-center">
                                     <h6 className="col-auto align-middle">Built With:</h6>
@@ -102,7 +129,7 @@ const Projects = () => {
                                         <FaGithub /> GitHub</a>
                                     <a href="https://we-cook-recipe-sharing.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="btn btn-sm bg-orange me-2">
                                         <FaDesktop /> Live Site
-                                </a>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
@@ -126,27 +153,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div className="col-12 col-md-8 col-lg-6 pb-4" variants={card}>
-                            <div className="card mx-auto p-2">
-                                <img src={MS1} className="card-img-top p-1" alt="Website responsive mockup" />
-                                <div className="card-body">
-                                    <h5 className="card-title text-center fw-bold">The Drum School</h5>
-                                    <p className="card-text">A streamlined, responsive demo website for a drum school.</p>
-                                </div>
-                                <div className="card-body text-center">
-                                    <h6 className="col-auto align-middle">Built With:</h6>
-                                    <div className="row justify-content-center py-3">
-                                        <SkillsIcon IconName={SiHtml5} text="HTML 5" />
-                                        <SkillsIcon IconName={SiCss3} text="CSS 3" />
-                                        <SkillsIcon IconName={SiBootstrap} text="Bootstrap" />
-                                    </div>
-                                    <a href="https://github.com/oisintohak/The-Drum-School---MS1" target="_blank" rel="noopener noreferrer"
-                                        className="btn btn-sm bg-orange me-2"><FaGithub /> GitHub</a>
-                                    <a href="https://oisintohak.com/The-Drum-School---MS1/" target="_blank" rel="noopener noreferrer"
-                                        className="btn btn-sm bg-orange me-2 pe-2"><FaDesktop /> Live Site</a>
-                                </div>
-                            </div>
-                        </motion.div>
+
                     </motion.div>
                 </div>
             </IconContext.Provider>
