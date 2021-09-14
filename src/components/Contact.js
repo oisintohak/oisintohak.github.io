@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 import emailjs from 'emailjs-com';
 import ReCAPTCHA from "react-google-recaptcha";
 import { motion } from "framer-motion";
+import Swal from 'sweetalert2';
 import { FaLinkedin } from "react-icons/fa";
 import Navbar from './NavBar';
 
@@ -42,13 +43,27 @@ const items = {
 
 const Contact = () => {
     // EMAIL JS
+
+    const [sendingEmail, setSendingEmail] = useState(false);
     function sendEmail(e) {
         e.preventDefault();
+        setSendingEmail(true);
 
         emailjs.sendForm('gmail', 'contact_form', e.target, 'user_mAnea3QFbT15oFRptm5qE')
             .then((result) => {
-                console.log(result.text);
+                setSendingEmail(false);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent Successfully'
+                })
+                e.target.reset();
             }, (error) => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Something went wrong, please try again.',
+                    text: error.text,
+                })
+                setSendingEmail(false);
                 console.log(error.text);
             });
     }
@@ -86,7 +101,10 @@ const Contact = () => {
                             <div className="mx-auto mb-3 recaptcha">
                                 <ReCAPTCHA sitekey="6LccLfgaAAAAANvAX0UjSg1aqKVMuF9s4FssxQW6" />
                             </div>
-                            <input id="submit" type="submit" className="btn btn-lg bg-orange" value="Submit" />
+                            {sendingEmail ?
+                                <button disabled type="submit" className="btn btn-lg bg-orange"><span className="spinner-border mx-1 align-middle" role="status" aria-hidden="true"></span><span className="align-middle">Sending Message...</span></button> :
+                                <button type="submit" className="btn btn-lg bg-orange">Send Message</button>
+                            }
                         </form>
                     </div>
                 </motion.div>
