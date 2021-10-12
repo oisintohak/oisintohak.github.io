@@ -198,7 +198,7 @@ export default function About({ isFirstMount }) {
 
                             <div className="col-auto col-md-6 py-4  text-white">
                                 <motion.p variants={text}>
-                                    Hi, I'm <motion.span variants={highlight} className="fs-4 fw-bold text-orange">Oisín Tohak</motion.span>, a <motion.span variants={highlight} className="fs-4 fw-bold text-orange">Full Stack Web Developer</motion.span> with a passion for music and travel. I've recently completed a Diploma in Software Development at Code Institute. You can see my projects <NavLink className="text-orange" to="/projects">here.</NavLink>
+                                    Hi, I'm <motion.span variants={highlight} className="fs-4 fw-bold text-orange">Oisín Tohak</motion.span>, a <motion.span variants={highlight} className="fs-4 fw-bold text-orange">Full Stack Web Developer</motion.span> with a passion for music and travel. You can see my projects <NavLink className="text-orange" to="/projects">here.</NavLink>
                                 </motion.p>
                             </div>
 
