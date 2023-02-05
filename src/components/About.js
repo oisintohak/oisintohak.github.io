@@ -9,7 +9,9 @@ import Loader from './Loader';
 import SkillsIcon from './SkillsIcon';
 import CV from '../Oisin_Tohak_CV.pdf';
 // import USER from '../images/USER.png';
-import PROFILE_PICTURE from '../images/PROFILE_PICTURE.jpg'
+// import PROFILE_PICTURE from '../images/PROFILE_PICTURE.jpg'
+import PROFILE_PICTURE from '../images/newportfolio.jpg'
+
 
 
 export default function About({ isFirstMount }) {
