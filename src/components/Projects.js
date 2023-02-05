@@ -80,7 +80,7 @@ const Projects = () => {
                                     </div>
                                     <a href="https://github.com/oisintohak/Farm-To-Fork" target="_blank" rel="noopener noreferrer"
                                         className="btn btn-sm bg-orange me-2"><FaGithub /> GitHub</a>
-                                    <a href="https://farmtoforkheroku.herokuapp.com/" target="_blank" rel="noopener noreferrer"
+                                    <a href="https://farm-to-fork.onrender.com" target="_blank" rel="noopener noreferrer"
                                         className="btn btn-sm bg-orange me-2 pe-2"><FaDesktop /> Live Site</a>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ const Projects = () => {
                                     </div>
                                     <a href="https://github.com/oisintohak/MS3" target="_blank" rel="noopener noreferrer" className="btn btn-sm bg-orange me-2">
                                         <FaGithub /> GitHub</a>
-                                    <a href="https://we-cook-recipe-sharing.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="btn btn-sm bg-orange me-2">
+                                    <a href="https://we-cook.onrender.com/register" target="_blank" rel="noopener noreferrer" className="btn btn-sm bg-orange me-2">
                                         <FaDesktop /> Live Site
                                     </a>
                                 </div>
